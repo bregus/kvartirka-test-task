@@ -102,6 +102,15 @@ extension HomeFeedViewController : UITableViewDelegate, UITableViewDataSource {
         return 44
     }
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return (tableView.frame.width / (General.currentSession.flats[indexPath.row].photoDefault?.aspectRatio)!) + 60
+        } else if indexPath.section == 1 && General.currentSession.flats.count == 0 {
+            return tableView.frame.height
+        }
+        return 44
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return General.currentSession.flats.count
