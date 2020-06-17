@@ -1,0 +1,16 @@
+PODS:
+  - ScrollingPageControl (0.1.1)
+
+DEPENDENCIES:
+  - ScrollingPageControl
+
+SPEC REPOS:
+  trunk:
+    - ScrollingPageControl
+
+SPEC CHECKSUMS:
+  ScrollingPageControl: 7642e1f842000eeccf8bc47a5718e4b678e10f10
+
+PODFILE CHECKSUM: 91c52eba68fb8891eb196cb2f1a7199f10422fb7
+
+COCOAPODS: 1.9.0
