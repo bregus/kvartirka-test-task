@@ -83,7 +83,6 @@ extension HomeFeedViewController : CLLocationManagerDelegate {
         if let location = locations.first {
             locationManager.stopUpdatingLocation()
             General.userLocation = location
-
             LoadFlats()
         }
     }
@@ -96,7 +95,7 @@ extension HomeFeedViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 250
+            return (tableView.frame.width / (General.currentSession.flats[indexPath.row].photoDefault?.aspectRatio)!) + 60
         } else if indexPath.section == 1 && General.currentSession.flats.count == 0 {
             return tableView.frame.height
         }
